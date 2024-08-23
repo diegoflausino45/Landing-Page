@@ -1,3 +1,232 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.linha-contatos{
+    font-size: 0.7em;
+    padding: 0.5em 1em;
+}
+
+header{
+    z-index: 1000;
+}
+
+.navbar ul li{
+    cursor: pointer;
+    padding:0.5em 1em;
+    transition: 0.5s;
+    color: #02682bf4;
+    font-weight: 100;
+}
+
+
+
+
+
+.navbar ul select{
+    cursor: pointer;
+    padding:0.5em 1em;
+    transition: 0.5s;
+    color: #02682bf4;
+    font-weight: 100;
+}
+
+.navbar ul select:hover{
+    cursor: pointer;
+    background-color: #04ca5315;
+}
+
+.overlay{
+    opacity: 0.53;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #003E19;
+}
+
+
+/*Carrosel de Principal Home
+************************************************/
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    pointer-events: all;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.carousel-indicators button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background-color: white;
+}
+
+
+/*Carrosel de Produtos
+************************************************/
+.carousel-produtos {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner-produtos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-produtos {
+    min-width: 18%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.carousel-item-produtos img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-controls-produtos {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-control-prev-produtos, .carousel-control-next-produtos {
+    pointer-events: all;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+
+
+
+
+.bg-image{
+    background-color: #4d996b;
+    background-image: url(/assets/bg-numbers.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    opacity: 1;
+    mix-blend-mode: multiply;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.bg-footer{
+    background-color: #4d996b;
+    background-image: url(/assets/bg-footer.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+}
+
+.navbar ul li:hover{
+    cursor: pointer;
+    background-color: #04ca5315;
+}
+
+.navbar ul li.home{
+    background-color: #04ca5315;
+}
+
+.img-carousel-produtos{
+    cursor: pointer;
+}
+
+.borda{
+    border-bottom: 7px double;
+    border-color: #199149de;
+}
+
+.btnWpp:hover{
+    animation: jump 0.5s alternate infinite;
+}
+
+.icons:hover{
+    animation: jump 0.5s alternate infinite;
+}
+
+
+@keyframes jump {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-8px);
+    }
+
+    
+}
