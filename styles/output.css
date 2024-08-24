@@ -2949,7 +2949,7 @@ header{
 
 .bg-image{
   background-color: #4d996b;
-  background-image: url(/assets/bg-numbers.jpg);
+  background-image: url(/assets/fotos-obras/bg-numbers.jpg);
   background-position: bottom center;
   background-size: cover;
   opacity: 1;
@@ -2959,9 +2959,10 @@ header{
 
 .bg-footer{
   background-color: #4d996b;
-  background-image: url(/assets/bg-footer.png);
+  background-image: url(/assets/fotos-footer/bg-footer.png);
   background-position: bottom center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .navbar ul li:hover{
