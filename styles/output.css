@@ -905,8 +905,8 @@ video {
   height: 4rem;
 }
 
-.h-64 {
-  height: 16rem;
+.h-60 {
+  height: 15rem;
 }
 
 .h-full {
@@ -2772,17 +2772,6 @@ body{
 }
 
 @media screen and (max-width: 768px) {
-  html{
-    overflow-x: hidden;
-  }
-
-  body{
-    width: 100%;
-  }
-
-  .carousel-item-produtos {
-    min-width: 25%;
-  }
 }
 
 header{
@@ -2906,10 +2895,11 @@ header{
 .carousel-inner-produtos {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  gap: 16px;
+  /* Ajuste o espaçamento entre os itens */
 }
 
 .carousel-item-produtos {
-  min-width: 18%;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -2918,6 +2908,8 @@ header{
   width: 100%;
   display: block;
 }
+
+/* Controles do carrossel */
 
 .carousel-controls-produtos {
   position: absolute;
@@ -2940,6 +2932,27 @@ header{
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+/* Para telas menores */
+
+@media (max-width: 768px) {
+  .carousel-item-produtos {
+    min-width: 100%;
+  }
+
+  html{
+    overflow-x: hidden;
+  }
+}
+
+/* Para telas maiores */
+
+@media (min-width: 769px) {
+  .carousel-item-produtos {
+    min-width: 20%;
+    /* 5 itens visíveis ao mesmo tempo */
+  }
 }
 
 .bg-image{
@@ -3124,6 +3137,10 @@ header{
     margin-right: 11rem;
   }
 
+  .md\:h-full {
+    height: 100%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -3134,6 +3151,15 @@ header{
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:pb-1 {
@@ -3158,6 +3184,10 @@ header{
 
   .md\:pt-0 {
     padding-top: 0px;
+  }
+
+  .md\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .md\:text-start {

@@ -33,12 +33,16 @@ function autoSlide() {
 // Configura o intervalo para mudar automaticamente os slides a cada 3 segundos
 setInterval(autoSlide, 5000);
 
-
 const carouselInnerProdutos = document.querySelector('.carousel-inner-produtos');
 const items = document.querySelectorAll('.carousel-item-produtos');
 const totalItems = items.length;
-const visibleItems = 5; // Número de itens visíveis
+let visibleItems = window.innerWidth > 768 ? 5 : 1; // Define o número de itens visíveis conforme a largura da tela
 let currentIndex = 0;
+
+window.addEventListener('resize', () => {
+    visibleItems = window.innerWidth > 768 ? 5 : 1;
+    updateCarouselProdutos();
+});
 
 document.querySelector('.carousel-control-prev-produtos').addEventListener('click', () => {
     if (currentIndex > 0) {
@@ -59,7 +63,6 @@ document.querySelector('.carousel-control-next-produtos').addEventListener('clic
 });
 
 function updateCarouselProdutos() {
-    const translateXValue = -(currentIndex * (100 / visibleItems));
+    const translateXValue = -(currentIndex * (103.7 / visibleItems));
     carouselInnerProdutos.style.transform = `translateX(${translateXValue}%)`;
 }
-
