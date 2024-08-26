@@ -66,3 +66,15 @@ function updateCarouselProdutos() {
     const translateXValue = -(currentIndex * (103.7 / visibleItems));
     carouselInnerProdutos.style.transform = `translateX(${translateXValue}%)`;
 }
+
+
+const hamburguer = document.getElementById('hamburguer')
+const navegacao = document.getElementById('navegacao')
+
+hamburguer.addEventListener('click', function(){
+    if(navegacao.style.display === 'flex'){
+        navegacao.style.display = 'none'
+    }else{
+        navegacao.style.display = 'flex'
+    }
+})

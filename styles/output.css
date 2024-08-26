@@ -905,6 +905,10 @@ video {
   height: 4rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .h-60 {
   height: 15rem;
 }
@@ -1467,10 +1471,6 @@ video {
   gap: 1.5rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1827,31 +1827,6 @@ video {
 .rounded-t {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-}
-
-.rounded-b-full {
-  border-bottom-right-radius: 9999px;
-  border-bottom-left-radius: 9999px;
-}
-
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
-.rounded-t-full {
-  border-top-left-radius: 9999px;
-  border-top-right-radius: 9999px;
-}
-
-.rounded-t-xl {
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-}
-
-.rounded-b-2xl {
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
 }
 
 .rounded-bl {
@@ -2293,11 +2268,6 @@ video {
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
-}
-
-.text-\[0\.6em\]\/\[1em\] {
-  font-size: 0.6em;
-  line-height: 1em;
 }
 
 .text-xl {
@@ -2807,7 +2777,6 @@ header{
   cursor: pointer;
   padding:0.5em 1em;
   transition: 0.5s;
-  color: #02682bf4;
   font-weight: 100;
 }
 
@@ -2815,7 +2784,6 @@ header{
   cursor: pointer;
   padding:0.5em 1em;
   transition: 0.5s;
-  color: #02682bf4;
   font-weight: 100;
 }
 
@@ -3162,8 +3130,20 @@ header{
     margin-right: 11rem;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
   }
 
   .md\:flex-row {
@@ -3182,8 +3162,13 @@ header{
     gap: 2rem;
   }
 
-  .md\:rounded-lg {
-    border-radius: 0.5rem;
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .md\:p-2 {
+    padding: 0.5rem;
   }
 
   .md\:px-12 {
@@ -3197,6 +3182,10 @@ header{
 
   .md\:pb-10 {
     padding-bottom: 2.5rem;
+  }
+
+  .md\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .md\:pl-0 {
@@ -3215,10 +3204,6 @@ header{
     padding-top: 0px;
   }
 
-  .md\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
   .md\:text-start {
     text-align: start;
   }
@@ -3226,6 +3211,10 @@ header{
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[\#02682bf4\] {
+    color: #02682bf4;
   }
 }
 
