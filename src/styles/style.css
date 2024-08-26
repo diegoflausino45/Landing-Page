@@ -14,14 +14,11 @@ body{
     padding: 0.5em 1em;
 }
 
-@media screen and (max-width: 768px) {
-
-
-
-}
 
 header{
     z-index: 1000;
+    position: sticky;
+    top: 0;
 }
 
 .navbar ul li{
@@ -201,7 +198,7 @@ header{
 
 .bg-image{
     background-color: #4d996b;
-    background-image: url(/assets/fotos-obras/bg-numbers.jpg);
+    background-image: url(/src/assets/fotos-obras/bg-numbers.jpg);
     background-position: bottom center;
     background-size: cover;
     opacity: 1;
@@ -211,7 +208,7 @@ header{
 
 .bg-footer{
     background-color: #4d996b;
-    background-image: url(/assets/fotos-footer/bg-footer.png);
+    background-image: url(/src/assets/fotos-footer/bg-footer.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: contain;
